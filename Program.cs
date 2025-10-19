@@ -28,7 +28,7 @@ builder.Services.AddDbContext<Context>(options =>
 // Inyección del servicio de Propietario
 builder.Services.AddScoped<IPropietarioService, PropietarioService>();
 
-// Configuración de JWT
+// Configuración de JWT usando la misma clave que el login
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -42,9 +42,10 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["Jwt:Issuer"],
-        ValidAudience = builder.Configuration["Jwt:Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]))
+        ValidIssuer = builder.Configuration["TokenAuthentication:Issuer"],
+        ValidAudience = builder.Configuration["TokenAuthentication:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(builder.Configuration["TokenAuthentication:SecretKey"]))
     };
 });
 
@@ -60,7 +61,5 @@ if (app.Environment.IsDevelopment())
 //app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
