@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Pamela\\Proyectos\\InmobiliariaAPI\\wwwroot\\Uploads\\inmueble_10.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\inmueble_10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Pamela\\Proyectos\\InmobiliariaAPI\\wwwroot\\Uploads\\inmueble_12.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\inmueble_12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Pamela\\Proyectos\\InmobiliariaAPI\\wwwroot\\Uploads\\inmueble_13.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\inmueble_13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Pamela\\Proyectos\\InmobiliariaAPI\\wwwroot\\Uploads\\inmueble_14.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\inmueble_14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Pamela\\Proyectos\\InmobiliariaAPI\\wwwroot\\Uploads\\inmueble_4.png",
+      "PackagePath": "staticwebassets\\Uploads\\inmueble_4.png"
+    },
+    {
+      "Id": "C:\\Users\\Pamela\\Proyectos\\InmobiliariaAPI\\wwwroot\\Uploads\\inmueble_5.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\inmueble_5.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.InmobiliariaAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.InmobiliariaAPI.props",
+      "PackagePath": "build\\InmobiliariaAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.InmobiliariaAPI.props",
+      "PackagePath": "buildMultiTargeting\\InmobiliariaAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.InmobiliariaAPI.props",
+      "PackagePath": "buildTransitive\\InmobiliariaAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

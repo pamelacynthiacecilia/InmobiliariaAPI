@@ -6,10 +6,10 @@ using InmobiliariaAPI.Interfaces;
 using InmobiliariaAPI.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+//using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 
 namespace InmobiliariaAPI.Controllers
 {
@@ -37,12 +37,7 @@ namespace InmobiliariaAPI.Controllers
             if (loginView.Usuario == null || loginView.Clave == null)
                 return BadRequest("Usuario y clave son requeridos");
 
-            string hashed = await _service.HashPassword(loginView.Clave);/* Convert.ToBase64String(KeyDerivation.Pbkdf2(
-                password: loginView.Clave,
-                salt: Encoding.ASCII.GetBytes(_config["Salt"]),
-                prf: KeyDerivationPrf.HMACSHA1,
-                iterationCount: 1000,
-                numBytesRequested: 256 / 8)); */
+            string hashed = await _service.HashPassword(loginView.Clave);
 
             var propietario = await _context.Propietarios
                 .FirstOrDefaultAsync(x => x.Email == loginView.Usuario);
